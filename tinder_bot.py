@@ -29,7 +29,6 @@ class TinderBot():
 
         email_in = self.driver.find_element_by_xpath('//*[@id="email"]')
         email_in.send_keys(username)
-
         password_in = self.driver.find_element_by_xpath('//*[@id="pass"]')
         password_in.send_keys(password)
 
@@ -37,6 +36,14 @@ class TinderBot():
         login_btn.click()
 
         self.driver.switch_to_window(base_window)
+
+        loc_btn = self.driver.find_element_by_xpath('//*[@id="modal-manager"]/div/div/div/div/div[3]/button[1]')
+        loc_btn.click()
+
+        noti_btn = self.driver.find_element_by_xpath('//*[@id="modal-manager"]/div/div/div/div/div[3]/button[1]')
+        noti_btn.click()
+
+
 
 
 # if __name__ == "__main__":
